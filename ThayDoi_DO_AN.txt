@@ -1,0 +1,12 @@
+
+ quản lý nhân sự của 1 cong ty 
+Hồ sơ gồm bảo hiểm xã hội , thông tin cơ bản,hợp đồng,
+- Nhân viên parttime
+- Nhân viên Theo ca giờ làm 
+- tính lương theo ngày ,giờ làm,thuế ,phụ cấp,phép,chiết khấu bảo hiểm từ bảng chấm công
+- thông báo nhắc nhở 
+- thống kê lương
+
+
+làm bao nhiêu ngày khoản phụ cấp, khấu trừ, ngày phép, thuế , phép tắt, bảo hiểm xã hội, ...
+theo giờ , theo ca (dữ liệu có nhiều trường hợp như đi muộn, đi trễ, nghỉ quá phép,...)

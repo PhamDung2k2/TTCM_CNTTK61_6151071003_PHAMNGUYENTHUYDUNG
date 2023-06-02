@@ -1,0 +1,63 @@
+﻿body {
+    background-image: url(../../Content/Image/bg-01.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #3980d2;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.circle {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-image: url(../../Content/Image/icon-user.jpg); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.login-msg {
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: gainsboro;
+}
