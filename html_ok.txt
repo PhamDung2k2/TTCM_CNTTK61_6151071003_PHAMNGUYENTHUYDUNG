@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -52,20 +52,18 @@
             <div class="topbar">
                 <div class="toggle"><i class="fa-solid fa-bars"></i></div>
                 <div class="dropdown" style="right:20px;">
-                    <button type="button" class="btn"  data-bs-toggle="dropdown" style="text-decoration: underline;">
+                    <button type="button" class="btn dropdown-toggle" data-mdb-ripple-color="light" data-bs-toggle="dropdown">
                         Dropdown button
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Thông Tin Cá Nhân</a></li>
-                        <li><a class="dropdown-item" href="#">Thông Tin Hợp Đồng</a></li>
-                        <li><a class="dropdown-item" href="#">Thông Tin Bảo Hiểm</a></li>
-                        <li><a class="dropdown-item" href="#">Chấm Công</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</a></li>
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
                     </ul>
                 </div>
 
             </div>
-            <div class="content" style="padding:0 10px;">
+            <div class="content" style="padding:10px;">
                 @RenderBody()
             </div>
         </div>

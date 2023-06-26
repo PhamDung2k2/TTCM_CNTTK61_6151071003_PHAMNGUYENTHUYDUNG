@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url(../../Content/Image/bg-01.jpg);
+    background-image: url(../../Content/MyFolder/Image/bg-01.jpg);
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
@@ -47,7 +47,7 @@ button[type="submit"] {
     display: inline-block;
     width: 80px;
     height: 80px;
-    background-image: url(../../Content/Image/icon-user.jpg); 
+    background-image: url(../../Content/MyFolder/Image/icon-user.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
