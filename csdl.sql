@@ -36,7 +36,7 @@ Create table NhanVien (
 	CONSTRAINT fk_PhuCap foreign key (IdPC) references PhuCap (IdPC),
 );
 
-Create table TT_BaoHiem (
+Create table TTBaoHiem (
 	IdBH int primary key not null identity (1,1),
 	IdNV int,
 	TenBH nvarchar (50),
@@ -50,8 +50,8 @@ Create table TTChamCong (
 	IdCC int primary key not null identity (1,1),
 	IdNV int,
 	NgayCC date,
-	TVao datetime,
-	TRa datetime,
+	TVao time,
+	TRa time,
 	ViPham bit default 0,
 	CONSTRAINT fk_NhanVienCC foreign key (IdNV) references NhanVien (IdNV), 
 );
@@ -65,8 +65,9 @@ Create table HopDong (
 );
 drop table HopDong
 drop table TTChamCong
-drop table TT_BaoHiem
+drop table TTBaoHiem
 drop table NhanVien
+drop table PhuCap
 drop table ChucVu
 drop table PhongBan
 
@@ -79,18 +80,60 @@ insert into PhongBan(TenPhong) values (N'Phòng Hành Chính');
 insert into PhongBan(TenPhong) values (N'Phòng IT');
 --Chức Vụ
 insert into ChucVu(TenCV,LuongCB) values (N'Nhân Viên',5000);
-insert into ChucVu(TenCV,LuongCB) values (N'Trưởng Nhóm',10000);
-insert into ChucVu(TenCV,LuongCB) values (N'Giám Sát',16000);
-insert into ChucVu(TenCV,LuongCB) values (N'Chuyên Viên',12000);
-insert into ChucVu(TenCV,LuongCB) values (N'Trưởng Phòng',25000);
+insert into ChucVu(TenCV,LuongCB) values (N'Trưởng Nhóm',8000);
+insert into ChucVu(TenCV,LuongCB) values (N'Giám Sát',12000);
+insert into ChucVu(TenCV,LuongCB) values (N'Chuyên Viên',10000);
+insert into ChucVu(TenCV,LuongCB) values (N'Trưởng Phòng',16000);
 
  --Phụ Cấp
  insert into PhuCap values (N'Không Cấp Phụ Cấp',0);
  insert into PhuCap values (N'Phụ Cấp đi lại',800);
  --Nhân Viên
- insert into NhanVien values (N'Nguyễn Văn An','nguyenvanan@gmail.com','123456',1,'0975463335',1,'1990-05-09',57,N'Kinh',N'Quản Trị Nhân Lực',1,6,N'Đại Học');
- insert into NhanVien values (N'Trần Thanh Vân','tranthanhvan@gmail.com','123456',0,'0335467862',0,'1995-03-25',37,N'Kinh',N'Quản Trị Kinh Doanh',1,1,N'Cao Đẳng');
- insert into NhanVien values (N'Bùi Ngọc Trân','buingoctran@gmail.com','123456',0,'0755456824',0,'2000-06-24',12,N'Kinh',N'Công Nghệ Thông Tin',6,2,N'Cao Đẳng');
+ insert into NhanVien values (N'Nguyễn Văn An','nguyenvanan@gmail.com','123456',1,'0975463335',1,'1990-05-09',N'Hồ Chí Minh',N'Kinh',1,5,2,N'Kỹ Sư');
+ insert into NhanVien values (N'Trần Thanh Vân','tranthanhvan@gmail.com','123456',0,'0335467862',0,'1995-03-25',N'Long An',N'Kinh',1,1,1,N'Cử Nhân');
+ insert into NhanVien values (N'Bùi Ngọc Trân','buingoctran@gmail.com','123456',0,'0755456824',0,'2000-06-24',N'Ninh Thuận',N'Kinh',6,1,1,N'Cử Nhân');
+ --Bảo hiểm
+
+insert into TTBaoHiem(IdNV,TenBH,TyLeBH,NgayHL,NgayHetHL) values (1,N'XH, YT ,TN',0.105,'2023-05-15','2028-05-15');
+insert into TTBaoHiem(IdNV,TenBH,TyLeBH,NgayHL,NgayHetHL) values (2,N'XH, YT ,TN',0.105,'2023-05-15','2028-05-15');
+insert into TTBaoHiem(IdNV,TenBH,TyLeBH,NgayHL,NgayHetHL) values (3,N'XH, YT ,TN',0.105,'2023-05-15','2028-05-15');
+
+ --Chấm công
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-16','07:50:00','17:05:00')
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-17','08:01:00','17:00:00')
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-18','07:59:00','16:59:00')
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-18','08:59:00','16:59:00')
+ --Hợp đồng
+
+
+ -- Tạo trigger tự động cập nhật tiền bảo hiểm khi nhập 1 bản ghi 
+  Create Trigger tr_BH On TTBaoHiem
+for insert,update
+AS
+	Begin
+		Declare @IdBH int
+		select @IdBH = IdBH From inserted 
+		update TTBaoHiem
+		set TienBH = TyLeBH * (select LuongCB From ChucVu cv, NhanVien nv, inserted i where i.IdNV = nv.IdNV and nv.IdCV = cv.IdCV)
+		where IdBH = @IdBH
+	End
+-- Tạo trigger set ViPham = 1 khi nhân viên có thời gian vào trễ hơn 8h hoặc thời gian ra sớm hơn 17h và khi ViPham = 0
+	Create Trigger tr_CC On TTChamCong
+for insert,update
+AS
+	Begin
+		Declare @TVao time ,@TRa time ,@ViPham bit, @IdCC int
+		select @TVao =  TVao From inserted 
+		select @TRa =  TRa From inserted 
+		select @ViPham =  ViPham From inserted 
+		select @IdCC =  IdCC From inserted 
+		if (@TVao > '08:00:00' or @TRa < '17:00:00' )
+		begin
+			update TTChamCong
+			set ViPham = 1
+			where IdCC = @IdCC and @ViPham = 0
+		end
+	End
 
  create proc sp_TongNgayCong(
 		@IdNV int,
@@ -106,11 +149,11 @@ create proc sp_TinhLuong (
 as
 begin 
 	declare @Luong float ,@NgayCong int,@SoVPham int,@TienPC float,@LuongCB float
-	set @NgayCong = (SELECT COUNT(*)  FROM ChamCong where MONTH(NgayChamCong)= @ThangCong and IdNV = @IdNV GROUP BY MONTH(NgayChamCong))
+	set @NgayCong = (SELECT COUNT(*)  FROM ChamCong where MONTH(NgayCC)= @ThangCong and IdNV = @IdNV GROUP BY MONTH(NgayCC))
 	set @SoVPham = (SELECT COUNT(*)  FROM TTChamCong where MONTH(NgayCC)= @ThangCong and IdNV = @IdNV and ViPham = 1 GROUP BY MONTH(NgayCC))
 	set @TienPC = (Select pc.TienPC from NhanVien nv ,PhuCap pc where nv.IdPC =pc.IdPC )  
 	set @LuongCB = (Select cv.LuongCB from NhanVien nv ,ChucVu cv where nv.IdCV =cv.IdCV )  
-	set @Luong = ((select @LuongCB/26 from NhanVien where IdNV = @IdNV) * @NgayCong - 30*@SoVPham + @TienPC)
+	set @Luong = ((select @LuongCB/26 from NhanVien where IdNV = @IdNV) * @NgayCong - 30*@SoVPham + @TienPC - )
 	select Round(@Luong,3) as TongLuong
 end
  create proc sp_TongViPham(
@@ -119,3 +162,4 @@ end
 )
 as
 SELECT COUNT(*)  FROM TTChamCong where MONTH(NgayCC)= @ThangCong and IdNV = @IdNV and ViPham = 1 GROUP BY MONTH(NgayCC)
+
