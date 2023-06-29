@@ -1,0 +1,16 @@
+public ActionResult TinhLuong(int? ThangCong)
+        {
+            List<Luong> luong = new List<Luong>();
+            double tinhluong = 0.0;
+            int tongngaycong = 0;
+            int tongvipham = 0;
+            var nhanViens = db.NhanViens.Include(n => n.ChucVu).Include(n => n.PhongBan).ToList();
+            foreach (var nv in nhanViens)
+            {
+                tinhluong = db.sp_TinhLuong(nv.IdNV, ThangCong).FirstOrDefault().GetValueOrDefault();
+                tongngaycong = db.sp_TongNgayCong(nv.IdNV, ThangCong).FirstOrDefault().GetValueOrDefault();
+                tongvipham = db.sp_TongViPham(nv.IdNV, ThangCong).FirstOrDefault().GetValueOrDefault();
+                luong.Add(new Luong(tinhluong, tongngaycong, tongvipham, nv));
+            }
+            return View(luong);
+        }

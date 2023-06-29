@@ -1,0 +1,81 @@
+@model IEnumerable<QLNS.Models.Luong>
+@{
+    ViewBag.Title = "TinhLuong";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="text-center">Bảng Lương Của Nhân Viên</h2>
+<br />
+<hr />
+<table class="table table-hover text-center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nv.IdNV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nv.HoTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nv.GioiTinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nv.NgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nv.ChucVu.TenCV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nv.PhongBan.TenPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nv.ChucVu.LuongCB)
+        </th>
+        <th>Tổng Ngày Công</th>
+        <th>Tổng Vi Phạm</th>
+        <th>Tổng Lương</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nv.IdNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nv.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nv.GioiTinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nv.NgaySinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nv.ChucVu.TenCV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nv.PhongBan.TenPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nv.ChucVu.LuongCB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongNgayCong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongViPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongLuong)
+            </td>
+        </tr>
+
+    }
+
+</table>
+<div class="form-group row" style="padding-top:10px;padding-left:15px">
+    <div class="col-md-2">
+        <a href="@Url.Action("Index","NhanVien")" class="btn btn-primary">Trở lại</a>
+    </div>
+</div>

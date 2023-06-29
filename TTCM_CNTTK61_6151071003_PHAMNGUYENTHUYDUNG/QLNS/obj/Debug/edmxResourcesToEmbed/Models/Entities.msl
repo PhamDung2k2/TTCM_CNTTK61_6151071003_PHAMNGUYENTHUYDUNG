@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLNhanSuModelStoreContainer" CdmEntityContainer="QLNhanSuEntities">
+    <EntitySetMapping Name="ChucVus">
+      <EntityTypeMapping TypeName="QLNhanSuModel.ChucVu">
+        <MappingFragment StoreEntitySet="ChucVu">
+          <ScalarProperty Name="IdCV" ColumnName="IdCV" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+          <ScalarProperty Name="LuongCB" ColumnName="LuongCB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HopDongs">
+      <EntityTypeMapping TypeName="QLNhanSuModel.HopDong">
+        <MappingFragment StoreEntitySet="HopDong">
+          <ScalarProperty Name="IdHD" ColumnName="IdHD" />
+          <ScalarProperty Name="IdNV" ColumnName="IdNV" />
+          <ScalarProperty Name="TenHD" ColumnName="TenHD" />
+          <ScalarProperty Name="TuNgay" ColumnName="TuNgay" />
+          <ScalarProperty Name="DenNgay" ColumnName="DenNgay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanViens">
+      <EntityTypeMapping TypeName="QLNhanSuModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="IdNV" ColumnName="IdNV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="IdPB" ColumnName="IdPB" />
+          <ScalarProperty Name="IdCV" ColumnName="IdCV" />
+          <ScalarProperty Name="IdPC" ColumnName="IdPC" />
+          <ScalarProperty Name="TrinhDoHV" ColumnName="TrinhDoHV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhongBans">
+      <EntityTypeMapping TypeName="QLNhanSuModel.PhongBan">
+        <MappingFragment StoreEntitySet="PhongBan">
+          <ScalarProperty Name="IdPB" ColumnName="IdPB" />
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhuCaps">
+      <EntityTypeMapping TypeName="QLNhanSuModel.PhuCap">
+        <MappingFragment StoreEntitySet="PhuCap">
+          <ScalarProperty Name="IdPC" ColumnName="IdPC" />
+          <ScalarProperty Name="TenPC" ColumnName="TenPC" />
+          <ScalarProperty Name="TienPC" ColumnName="TienPC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLNhanSuModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TTBaoHiems">
+      <EntityTypeMapping TypeName="QLNhanSuModel.TTBaoHiem">
+        <MappingFragment StoreEntitySet="TTBaoHiem">
+          <ScalarProperty Name="IdBH" ColumnName="IdBH" />
+          <ScalarProperty Name="IdNV" ColumnName="IdNV" />
+          <ScalarProperty Name="TenBH" ColumnName="TenBH" />
+          <ScalarProperty Name="TyLeBH" ColumnName="TyLeBH" />
+          <ScalarProperty Name="NgayHL" ColumnName="NgayHL" />
+          <ScalarProperty Name="NgayHetHL" ColumnName="NgayHetHL" />
+          <ScalarProperty Name="TienBH" ColumnName="TienBH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TTChamCongs">
+      <EntityTypeMapping TypeName="QLNhanSuModel.TTChamCong">
+        <MappingFragment StoreEntitySet="TTChamCong">
+          <ScalarProperty Name="IdCC" ColumnName="IdCC" />
+          <ScalarProperty Name="IdNV" ColumnName="IdNV" />
+          <ScalarProperty Name="NgayCC" ColumnName="NgayCC" />
+          <ScalarProperty Name="TVao" ColumnName="TVao" />
+          <ScalarProperty Name="TRa" ColumnName="TRa" />
+          <ScalarProperty Name="ViPham" ColumnName="ViPham" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLNhanSuModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLNhanSuModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLNhanSuModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLNhanSuModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLNhanSuModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLNhanSuModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLNhanSuModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLNhanSuModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_TinhLuong" FunctionName="QLNhanSuModel.Store.sp_TinhLuong" />
+    <FunctionImportMapping FunctionImportName="sp_TongNgayCong" FunctionName="QLNhanSuModel.Store.sp_TongNgayCong" />
+    <FunctionImportMapping FunctionImportName="sp_TongViPham" FunctionName="QLNhanSuModel.Store.sp_TongViPham" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLNhanSuModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

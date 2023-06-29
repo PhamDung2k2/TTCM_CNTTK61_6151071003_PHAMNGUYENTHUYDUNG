@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4a5a6a1d50614426a5f098f0b08e83c4" Name="Diagram1">
+        <EntityTypeShape EntityType="QLNhanSuModel.ChucVu" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNhanSuModel.HopDong" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNhanSuModel.NhanVien" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNhanSuModel.PhongBan" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNhanSuModel.PhuCap" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNhanSuModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNhanSuModel.TTBaoHiem" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLNhanSuModel.TTChamCong" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="QLNhanSuModel.fk_ChucVu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNhanSuModel.fk_NhanVienHD" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNhanSuModel.fk_NhanVienBH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNhanSuModel.fk_NhanVienCC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNhanSuModel.fk_PhongBan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLNhanSuModel.fk_PhuCap" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,68 @@
+﻿@model QLNS.Models.TTBaoHiem
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="padding-left:40px;">Thông Tin Bảo Hiểm</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVien.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.HoTen)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TenBH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenBH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TyLeBH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TyLeBH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHetHL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHetHL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienBH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienBH)
+        </dd>
+
+
+
+    </dl>
+</div>@*
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdBH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+*@

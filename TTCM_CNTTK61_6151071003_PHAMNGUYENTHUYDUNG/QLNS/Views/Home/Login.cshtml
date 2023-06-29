@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quản lý nhân sự</title>
     <link rel="shortcut icon" href="~/Content/MyFolder/Image/icon-user.jpg" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="~/Content/Style/LoginStyle.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/MyFolder/Style/LoginStyle.css" />
 </head>
 <body class="login-page">
     <div class="container">
@@ -27,7 +27,7 @@
             @Html.AntiForgeryToken()
             <form>
                 <input type="text" class="form-control" placeholder="Tài khoản" name="TaiKhoan" value="">
-                    <span><i class="fas fa-envelope"></i></span>
+                <span><i class="fas fa-envelope"></i></span>
                 <input type="password" class="form-control" placeholder="Mật khẩu" name="MatKhau" value="">
                 <p class="login-msg">
                     <span class="text-danger">
@@ -37,8 +37,7 @@
                 <button type="submit">Đăng nhập</button>
             </form>
 
-         }
-
+        }
     </div>
 </body>
 </html>

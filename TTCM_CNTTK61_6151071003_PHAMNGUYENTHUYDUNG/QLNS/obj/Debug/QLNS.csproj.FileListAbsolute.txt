@@ -76,4 +76,8 @@ C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003
 C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\obj\Debug\QLNS.csproj.CopyComplete
 C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\obj\Debug\QLNS.dll
 C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\obj\Debug\QLNS.pdb
+C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\bin\EntityFramework.dll
+C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\bin\EntityFramework.SqlServer.dll
+C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\bin\EntityFramework.xml
+C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\bin\EntityFramework.SqlServer.xml
 C:\Users\phamd\OneDrive\Máy tính\Dung\ThucTapChuyenMon\TTCM_CNTTK61_6151071003_PHAMNGUYENTHUYDUNG\QLNS\obj\Debug\QLNS.csproj.AssemblyReference.cache

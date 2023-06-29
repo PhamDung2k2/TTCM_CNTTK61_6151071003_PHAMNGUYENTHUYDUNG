@@ -1,0 +1,173 @@
+﻿@model IEnumerable<QLNS.Models.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Danh Sách Nhân Viên</h2>
+
+<div class="form-group row">
+    <div class="">
+        <a href="@Url.Action("Create","NhanVien")" class="btn btn-outline-success ">Thêm mới</a>
+    </div>
+    @using (Html.BeginForm("TinhLuong", "NhanVien", FormMethod.Post))
+    {
+        <div class="form-group form-inline">
+            <div class="form-group ">
+                <input type="text" class="form-control" name="ThangCong" placeholder="Nhập Tháng Để Tính Lương" style="width:230px " />
+            </div>
+            <button type="submit" class="btn btn-success">Tính Lương</button>
+        </div>
+    }
+</div>
+<table class="table table-hover text-center ">
+    <tr>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.HoTen)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.QueQuan)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.DanToc)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.TrinhDoHV)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.ChucVu.TenCV)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.PhongBan.TenPhong)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.PhuCap.TenPC)
+        </th>
+        <th class="text-center">Thao Tác</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioiTinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgaySinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QueQuan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DanToc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrinhDoHV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChucVu.TenCV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhongBan.TenPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhuCap.TenPC)
+            </td>
+            <td>
+                <a href="@Url.Action("Details", "NhanVien", new { id = item.IdNV })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
+                <a href="@Url.Action("Edit", "NhanVien", new { id = item.IdNV })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#del_@item.IdNV">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </td>
+
+        </tr>
+
+    }
+
+</table>
+@foreach (var item in Model)
+{
+    <!-- Modal -->
+    <!--<div class="modal fade" id="del_@item.IdNV">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xóa Nhân Viên</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn Có Chắc Muốn Xóa Nhân Viên Này?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    @using (Html.BeginForm("Delete", "NhanVien", new { id = item.IdNV }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Xác nhận" class="btn btn-danger" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- The Modal -->
+    <div class="modal" id="del_@item.IdNV">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Xóa Nhân Viên </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Bạn Có Chắc Muốn Xóa Nhân Viên Này? 
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                    @using (Html.BeginForm("Delete", "NhanVien", new { id = item.IdNV }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Xóa" class="btn btn-danger" />
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+}
+
+

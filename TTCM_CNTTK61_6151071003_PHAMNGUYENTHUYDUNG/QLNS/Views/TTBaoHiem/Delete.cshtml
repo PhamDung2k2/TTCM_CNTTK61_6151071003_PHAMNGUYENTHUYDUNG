@@ -1,0 +1,73 @@
+﻿@model QLNS.Models.TTBaoHiem
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TTBaoHiem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenBH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenBH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TyLeBH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TyLeBH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHetHL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHetHL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienBH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienBH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVien.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.HoTen)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

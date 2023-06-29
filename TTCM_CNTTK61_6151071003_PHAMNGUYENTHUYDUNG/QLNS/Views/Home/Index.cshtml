@@ -5,17 +5,23 @@
 <h3 class="text-center"> Tổng Quan Hệ Thống </h3>
 <br />
 <br />
+@if (ViewBag.VP.Count > 0)
+    {
+<div class="alert alert-danger">Bạn Đã Chấm Công Trễ Hoặc Đã Chấm Công Về Sớm @ViewBag.VP.Count lần trong tháng @DateTime.Now.AddMonths(-1).Month</div>
+    }
+
 <div class="card-content d-flex justify-content-around">
-    <div class="card" style="width: 45%; height: 100px; line-height: 80px; ">
+    <div class="card" style="width: 45%; height: 130px; line-height: 80px; ">
         <div class="card-body text-center" >
-            <h4 class="card-title">18</h4>
+            <h4 class="card-title">@ViewBag.NV</h4>
             <p class="card-text">Số Lượng Nhân Viên</p>
         </div>
     </div>
-    <div class="card" style="width: 45%; height: 100px; line-height: 80px;" >
+    <div class="card" style="width: 45%; height: 130px; line-height: 80px;" >
         <div class="card-body text-center">
-            <h4 class="card-title">18</h4>
+            <h4 class="card-title">@ViewBag.PB</h4>
             <p class="card-text">Số Lượng Phòng Ban</p>
         </div>
     </div>
 </div>
+    

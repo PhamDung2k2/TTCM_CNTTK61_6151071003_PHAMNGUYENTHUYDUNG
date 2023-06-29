@@ -1,0 +1,69 @@
+﻿@model IEnumerable<QLNS.Models.TTBaoHiem>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Danh Sách Bảo Hiểm</h2>
+
+        <div class="form-group row">
+            <div class="col-md-1">
+                <a href="@Url.Action("Create", "TTBaoHiem")" class="btn btn-outline-success">Thêm mới</a>
+            </div>
+        </div>
+
+<table class="table table-hover text-center ">
+    <tr>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.TenBH)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.TyLeBH)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.NgayHL)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.NgayHetHL)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.TienBH)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.NhanVien.HoTen)
+        </th>
+        <th class="text-center">Thao Tác</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenBH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TyLeBH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayHL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayHetHL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TienBH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhanVien.HoTen)
+            </td>
+            <td>
+               @* <a href="@Url.Action("Details", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
+                *@<a href="@Url.Action("Edit", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
+                <a href="@Url.Action("Delete", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="Xóa"><i class="far fa-trash-alt"></i></a>
+
+            </td>
+        </tr>
+    }
+
+</table>
