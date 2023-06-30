@@ -39,7 +39,7 @@ body{
     overflow:hidden;
 }
 .navigation.active{
-    width:90px;
+    width:100px;
 }
 .navigation ul{
     position:absolute;
@@ -131,8 +131,8 @@ body{
     transition: 0.5s;
 }
 .my-main.active{
-    width:calc(100% - 90px);
-    left: 90px;
+    width:calc(100% - 100px);
+    left: 100px;
 }
 .topbar {
     width:100%;

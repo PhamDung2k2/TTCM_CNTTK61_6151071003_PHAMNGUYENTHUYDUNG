@@ -13,7 +13,7 @@
     </div>
     @using (Html.BeginForm("TinhLuong", "NhanVien", FormMethod.Post))
     {
-        <div class="form-group form-inline">
+        <div class="form-group form-inline "style="margin-block-start:15px;">
             <div class="form-group ">
                 <input type="text" class="form-control" name="ThangCong" placeholder="Nhập Tháng Để Tính Lương" style="width:230px " />
             </div>
@@ -96,9 +96,9 @@
                 @Html.DisplayFor(modelItem => item.PhuCap.TenPC)
             </td>
             <td>
-                <a href="@Url.Action("Details", "NhanVien", new { id = item.IdNV })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
-                <a href="@Url.Action("Edit", "NhanVien", new { id = item.IdNV })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#del_@item.IdNV">
+                @*<a href="@Url.Action("Details", "NhanVien", new { id = item.IdNV })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
+                *@<a href="@Url.Action("Edit", "NhanVien", new { id = item.IdNV })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
+                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#del_@item.IdNV">
                     <i class="far fa-trash-alt"></i>
                 </button>
             </td>

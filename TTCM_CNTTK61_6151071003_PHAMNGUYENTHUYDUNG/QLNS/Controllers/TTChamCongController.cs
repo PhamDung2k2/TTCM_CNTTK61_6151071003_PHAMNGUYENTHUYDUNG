@@ -17,7 +17,18 @@ namespace QLNS.Controllers
         // GET: TTChamCong
         public ActionResult Index()
         {
-            var tTChamCongs = db.TTChamCongs.Include(t => t.NhanVien);
+            IQueryable<TTChamCong> tTChamCongs;
+
+            if (Convert.ToBoolean(Session["isAdmin"]))
+            {
+                 tTChamCongs = db.TTChamCongs.Include(t => t.NhanVien);
+            }
+            else
+            {
+                int IdNV = (int)Session["user_id"];
+                 tTChamCongs = db.TTChamCongs.Include(t => t.NhanVien).Where(t => t.IdNV == IdNV);
+            }
+
             return View(tTChamCongs.ToList());
         }
 

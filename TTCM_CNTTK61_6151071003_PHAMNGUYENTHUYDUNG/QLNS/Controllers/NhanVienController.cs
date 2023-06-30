@@ -26,13 +26,28 @@ namespace QLNS.Controllers
             double tinhluong = 0.0;
             int tongngaycong = 0;
             int tongvipham = 0;
-            var nhanViens = db.NhanViens.Include(n => n.ChucVu).Include(n => n.PhongBan).ToList();
+            double tienbh = 0.0;
+            var nhanViens = db.NhanViens.Include(n => n.ChucVu).Include(n => n.PhongBan).Include(n=>n.PhuCap).ToList();
+            var tTBaoHiems = db.TTBaoHiems.ToList();
+
+            //tự nó dừng
             foreach (var nv in nhanViens)
             {
-                tinhluong = db.sp_TinhLuong(nv.IdNV, ThangCong).FirstOrDefault().GetValueOrDefault();
-                tongngaycong = db.sp_TongNgayCong(nv.IdNV, ThangCong).FirstOrDefault().GetValueOrDefault();
-                tongvipham = db.sp_TongViPham(nv.IdNV, ThangCong).FirstOrDefault().GetValueOrDefault();
-                luong.Add(new Luong(tinhluong, tongngaycong, tongvipham, nv));
+               var tien =  tTBaoHiems.Where(t => t.IdNV == /*nv.IdNV*/2).FirstOrDefault();
+                if (tien != null)
+                {
+                    tienbh = (double)tien.TienBH;
+                }
+                else
+                {
+                    tienbh = 0.0;
+                }
+
+                tinhluong = db.sp_TinhLuong(/*nv.IdNV*/2, ThangCong).FirstOrDefault().GetValueOrDefault();
+                tongngaycong = db.sp_TongNgayCong(/*nv.IdNV*/2, ThangCong).FirstOrDefault().GetValueOrDefault();
+                tongvipham = db.sp_TongViPham(/*nv.IdNV*/2, ThangCong).FirstOrDefault().GetValueOrDefault();
+
+                luong.Add(new Luong(tinhluong, tongngaycong, tongvipham, tienbh, nv));
             }
             return View(luong);
         }
@@ -70,6 +85,7 @@ namespace QLNS.Controllers
         {
             if (ModelState.IsValid)
             {
+                nhanVien.Password = Helper.ComputeSha256Hash(nhanVien.Password);
                 db.NhanViens.Add(nhanVien);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -110,7 +126,14 @@ namespace QLNS.Controllers
             {
                 db.Entry(nhanVien).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                if (Convert.ToBoolean(Session["isAdmin"]))
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
             ViewBag.IdCV = new SelectList(db.ChucVus, "IdCV", "TenCV", nhanVien.IdCV);
             ViewBag.IdPB = new SelectList(db.PhongBans, "IdPB", "TenPhong", nhanVien.IdPB);

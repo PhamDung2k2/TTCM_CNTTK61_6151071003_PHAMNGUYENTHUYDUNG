@@ -77,7 +77,7 @@
                         <li data-bs-toggle="tooltip" data-bs-placement="right" title="Chấm Công">
                             <a href="@Url.Action("Index", "TTChamCong")">
                                 <span class="icon"><i class="fa-solid fa-clipboard-user"></i></span>
-                                <span class="title">Chấm Công</span>
+                                <span class="title">Thông Tin Chấm Công</span>
                             </a>
                         </li>
                        }
@@ -95,17 +95,17 @@
                         <li><a class="dropdown-item" href="~/NhanVien/Edit/@Session["user_id"]">Thông Tin Cá Nhân</a></li>
                         <li><a class="dropdown-item" href="~/HopDong/Details/@Session["user_id"]">Thông Tin Hợp Đồng</a></li>
                         <li><a class="dropdown-item" href="~/TTBaoHiem/Details/@Session["user_id"]">Thông Tin Bảo Hiểm</a></li>
-                        <li><a class="dropdown-item" href="#">Thông Tin Chấm Công</a></li>
+                        <li><a class="dropdown-item" href="~/TTChamCong/Index">Thông Tin Chấm Công</a></li>
                         <li><a class="dropdown-item" href="~/Home/Logout"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</a></li>
                     </ul>
                 </div>
 
             </div>
-            <div class="content" style="padding:0 20px;">
+            <div class="content" style="padding:0 50px 20px 50px;">
                 @RenderBody()
             </div>
         </div>
-
+            
     </div>
 
 

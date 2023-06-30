@@ -29,14 +29,14 @@ namespace QLNS.Controllers
                 return RedirectToAction("Login", "Home");
             }
         }
-        public JsonResult Test()
+        /*public JsonResult Test()
         {
             db.Configuration.ProxyCreationEnabled = false;
             int id = 1;
             string currentMonth = "5";
             var P = db.TTChamCongs.Where(c => c.IdNV == id).Where(t => t.NgayCC.Value.ToString("M") == currentMonth).Where(v => v.ViPham == true);
             return Json(P.ToList(), JsonRequestBehavior.AllowGet);
-        }
+        }*/
         //đăng nhập, đăng xuất
         [HttpGet]
         public ActionResult Login()
