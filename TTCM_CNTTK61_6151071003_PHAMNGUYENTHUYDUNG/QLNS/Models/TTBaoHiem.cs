@@ -17,10 +17,13 @@ namespace QLNS.Models
     {
         [Display(Name = "Mã Bảo Hiểm")]
         public int IdBH { get; set; }
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Nhân Viên")]
         public Nullable<int> IdNV { get; set; }
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Tên Bảo Hiểm")]
         public string TenBH { get; set; }
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Tỷ Lệ")]
         public Nullable<double> TyLeBH { get; set; }
         [Display(Name = "Ngày Hiệu Lực")]

@@ -13,7 +13,7 @@ namespace QLNS.Models
         public Nullable<double> TienBH { get; set; }
         public NhanVien nv { get; set; }
         public Luong() { }
-        public Luong(double TongLuong, int TongNgayCong, int TongViPham,double TienBH, NhanVien nv)
+        public Luong(double TongLuong, int TongNgayCong, int TongViPham,double TienBH ,NhanVien nv)
         {
             this.TongLuong = TongLuong;
             this.TongNgayCong = TongNgayCong;

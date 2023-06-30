@@ -17,6 +17,10 @@ namespace QLNS.Controllers
         // GET: PhuCap
         public ActionResult Index()
         {
+            if (TempData.ContainsKey("ErrorMessage"))
+            {
+                ViewBag.ErrorMessage = TempData["ErrorMessage"];
+            }
             return View(db.PhuCaps.ToList());
         }
 
@@ -89,6 +93,13 @@ namespace QLNS.Controllers
             return View(phuCap);
         }
 
+        public bool HasEmployeesWithPhuCap(int id)
+        {
+            // Kiểm tra xem có nhân viên nào có phụ cấp này hay không
+            bool hasEmployees = db.NhanViens.Any(nv => nv.IdPC == id);
+
+            return hasEmployees;
+        }
         // GET: PhuCap/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -109,9 +120,23 @@ namespace QLNS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+           /* PhuCap phuCap = db.PhuCaps.Find(id);
+            db.PhuCaps.Remove(phuCap);
+            db.SaveChanges();
+            return RedirectToAction("Index");*/
+            bool hasEmployees = HasEmployeesWithPhuCap(id);
+
+            if (hasEmployees)
+            {
+                TempData["ErrorMessage"] = "Vẫn còn nhân viên có phụ cấp này!";
+                return RedirectToAction("Index"); 
+            }
+
+            // Xóa phụ cấp nếu không còn nhân viên nào có phụ cấp này
             PhuCap phuCap = db.PhuCaps.Find(id);
             db.PhuCaps.Remove(phuCap);
             db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 

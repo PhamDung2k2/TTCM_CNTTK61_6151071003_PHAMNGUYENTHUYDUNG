@@ -93,8 +93,8 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="~/NhanVien/Edit/@Session["user_id"]">Thông Tin Cá Nhân</a></li>
-                        <li><a class="dropdown-item" href="~/HopDong/Details/@Session["user_id"]">Thông Tin Hợp Đồng</a></li>
-                        <li><a class="dropdown-item" href="~/TTBaoHiem/Details/@Session["user_id"]">Thông Tin Bảo Hiểm</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Details", "HopDong", new { idNV = Session["user_id"] })">Thông Tin Hợp Đồng</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Details", "TTBaoHiem", new { idNV = Session["user_id"] })">Thông Tin Bảo Hiểm</a></li>
                         <li><a class="dropdown-item" href="~/TTChamCong/Index">Thông Tin Chấm Công</a></li>
                         <li><a class="dropdown-item" href="~/Home/Logout"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</a></li>
                     </ul>

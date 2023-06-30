@@ -27,7 +27,6 @@ namespace QLNS.Models
         [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Họ Tên")]
         public string HoTen { get; set; }
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Email/Gmail")]
         [EmailAddress(ErrorMessage = "Email không hợp lệ! Vui lòng kiểm tra lại")]
         public string Email { get; set; }
@@ -46,7 +45,7 @@ namespace QLNS.Models
         [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        [Display(Name ="Ngày Sinh")]
+        [Display(Name = "Ngày Sinh")]
         public Nullable<System.DateTime> NgaySinh { get; set; }
         [Display(Name = "Quê Quán")]
         [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
@@ -55,18 +54,15 @@ namespace QLNS.Models
         [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         public string DanToc { get; set; }
         [Display(Name = "Phòng Ban")]
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         public int IdPB { get; set; }
         [Display(Name = "Chức Vụ")]
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         public int IdCV { get; set; }
         [Display(Name = "Phụ Cấp")]
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         public Nullable<int> IdPC { get; set; }
         [Display(Name = "Trình Độ Học Vấn")]
         [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         public string TrinhDoHV { get; set; }
-    
+
         public virtual ChucVu ChucVu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HopDong> HopDongs { get; set; }

@@ -17,6 +17,10 @@ namespace QLNS.Controllers
         // GET: PhongBan
         public ActionResult Index()
         {
+            if (TempData.ContainsKey("ErrorMessage"))
+            {
+                ViewBag.ErrorMessage = TempData["ErrorMessage"];
+            }
             return View(db.PhongBans.ToList());
         }
 
@@ -89,6 +93,13 @@ namespace QLNS.Controllers
             return View(phongBan);
         }
 
+        public bool HasEmployeesWithPhongBan(int id)
+        {
+            // Kiểm tra xem có nhân viên nào có phụ cấp này hay không
+            bool hasEmployees = db.NhanViens.Any(nv => nv.IdPB == id);
+
+            return hasEmployees;
+        }
         // GET: PhongBan/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -109,6 +120,14 @@ namespace QLNS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            bool hasEmployees = HasEmployeesWithPhongBan(id);
+
+            if (hasEmployees)
+            {
+                TempData["ErrorMessage"] = "Vẫn còn nhân viên thuộc phòng ban này!";
+                return RedirectToAction("Index");
+            }
+
             PhongBan phongBan = db.PhongBans.Find(id);
             db.PhongBans.Remove(phongBan);
             db.SaveChanges();

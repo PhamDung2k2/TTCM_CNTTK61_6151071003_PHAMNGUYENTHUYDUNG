@@ -5,14 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Thêm Mới Hợp Đồng</h2>
+<h2 style="padding-left:150px;">Thêm Mới Hợp Đồng</h2>
 
 @using (Html.BeginForm("Create","HopDong",FormMethod.Post)) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>HopDong</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -56,5 +55,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Trở Lại", "Index")
 </div>

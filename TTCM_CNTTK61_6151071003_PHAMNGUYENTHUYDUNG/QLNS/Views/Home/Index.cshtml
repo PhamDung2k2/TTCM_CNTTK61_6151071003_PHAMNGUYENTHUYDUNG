@@ -7,7 +7,7 @@
 <br />
 @if (ViewBag.VP.Count > 0)
     {
-<div class="alert alert-danger">Bạn Đã Chấm Công Trễ Hoặc Đã Chấm Công Về Sớm @ViewBag.VP.Count lần trong tháng @DateTime.Now.AddMonths(-1).Month</div>
+<div class="alert alert-danger">Bạn Đã Chấm Công Vào Trễ Hoặc Đã Chấm Công Về Sớm <strong>@ViewBag.VP.Count lần</strong> trong <strong>tháng @DateTime.Now.AddMonths(-1).Month.</strong>  <strong>Hãy Có Trách Nhiệm, Cố Gắng Đúng Giờ !</strong> </div>
     }
 
 <div class="card-content d-flex justify-content-around">

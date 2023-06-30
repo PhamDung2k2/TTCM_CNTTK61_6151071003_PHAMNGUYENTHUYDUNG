@@ -22,13 +22,13 @@ namespace QLNS.Controllers
         }
 
         // GET: HopDong/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? idNV)
         {
-            if (id == null)
+            if (idNV == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            HopDong hopDong = db.HopDongs.Find(id);
+            HopDong hopDong = db.HopDongs.FirstOrDefault(hd => hd.IdNV == idNV);
             if (hopDong == null)
             {
                 return HttpNotFound();

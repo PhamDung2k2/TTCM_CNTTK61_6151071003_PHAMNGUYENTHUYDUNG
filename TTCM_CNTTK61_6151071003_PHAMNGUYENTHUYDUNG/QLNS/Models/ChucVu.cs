@@ -23,9 +23,11 @@ namespace QLNS.Models
 
         [Display(Name = "Mã Chức Vụ")]
         public int IdCV { get; set; }
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Tên Chức Vụ")]
         public string TenCV { get; set; }
         [Display(Name = "Lương Cơ Bản(1000VNĐ)")]
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [RegularExpression("^[0-9]*$", ErrorMessage = "Chỉ được nhập số!")]
         public double LuongCB { get; set; }
 

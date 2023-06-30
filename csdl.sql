@@ -65,13 +65,7 @@ Create table HopDong (
 	DenNgay date,
 	CONSTRAINT fk_NhanVienHD foreign key (IdNV) references NhanVien (IdNV),
 );
-drop table HopDong
-drop table TTChamCong
-drop table TTBaoHiem
-drop table NhanVien
-drop table PhuCap
-drop table ChucVu
-drop table PhongBan
+
 
 --Phòng Ban
 insert into PhongBan(TenPhong,SDT) values (N'Phòng Nhân Sự','18005291');
@@ -101,22 +95,24 @@ insert into TTBaoHiem(IdNV,TenBH,TyLeBH,NgayHL,NgayHetHL) values (2,N'XH, YT ,TN
 insert into TTBaoHiem(IdNV,TenBH,TyLeBH,NgayHL,NgayHetHL) values (3,N'XH, YT ,TN',0.105,'2023-05-15','2028-05-15');
 
  --Chấm công
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-16','07:50:00','17:05:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-17','08:01:00','17:00:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-18','07:59:00','16:59:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-19','08:59:00','16:59:00')
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-16','07:50:00','17:05:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-17','08:01:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-18','07:59:00','16:59:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-19','08:59:00','16:59:00');
 
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-16','07:55:00','17:00:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-17','07:55:00','17:00:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-18','07:55:00','17:00:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-19','07:55:00','17:00:00')
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-16','07:55:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-17','07:55:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-18','07:55:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-19','07:55:00','17:00:00');
 
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-16','08:05:00','17:00:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-17','07:55:00','17:00:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-18','07:55:00','17:00:00')
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-19','07:55:00','17:00:00')
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-16','08:05:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-17','07:55:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-18','07:55:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-19','07:55:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-19','07:55:00','17:00:00');
  --Hợp đồng
-insert into HopDong values (1,N'Hợp đồng 5 năm','2023-05-15','2028-05-15')
+insert into HopDong values (1,N'Hợp đồng 5 năm','2023-05-15','2028-05-15');
 
  -- Tạo trigger tự động cập nhật tiền bảo hiểm khi nhập 1 bản ghi 
   Create Trigger tr_BH On TTBaoHiem
@@ -152,28 +148,61 @@ AS
 		@ThangCong int
 )
 as
-SELECT COUNT(*) FROM TTChamCong where MONTH(NgayCC)= @ThangCong and IdNV = @IdNV GROUP BY MONTH(NgayCC)
+SELECT ISNULL(COUNT(NgayCC), 0) FROM TTChamCong WHERE MONTH(NgayCC) = @ThangCong AND IdNV = @IdNV
 
 --Proc Tính Lương của 1 nhân viên với IdNV và Tháng được nhập từ bàn phím
-create proc sp_TinhLuong (
-	@IdNV int ,
-	@ThangCong int
+CREATE PROCEDURE sp_TinhLuong (
+    @IdNV int,
+    @ThangCong int
 )
-as
-begin 
-	declare @Luong float ,@NgayCong int,@SoVPham int,@TienPC float,@LuongCB float,@TienBH float
-	select @NgayCong = (SELECT COUNT(*)  FROM TTChamCong where MONTH(NgayCC)= @ThangCong and IdNV = @IdNV GROUP BY MONTH(NgayCC))
-	select @SoVPham = (SELECT COUNT(*)  FROM TTChamCong where MONTH(NgayCC)= @ThangCong and IdNV = @IdNV and ViPham = 1 GROUP BY MONTH(NgayCC))
-	select @TienPC = (Select pc.TienPC from NhanVien nv ,PhuCap pc where nv.IdPC =pc.IdPC and nv.IdNV = @IdNV)  
-	select @LuongCB = (Select cv.LuongCB from NhanVien nv ,ChucVu cv where nv.IdCV =cv.IdCV and nv.IdNV = @IdNV)  
-	select @TienBH = (Select TienBH from TTBaoHiem Where IdNV = @IdNV)
-	set @Luong = ((select @LuongCB/26 from NhanVien where IdNV = @IdNV) * @NgayCong - 30*@SoVPham + @TienPC - @TienBH)
-	select Round(@Luong,3) 
-end
+AS
+BEGIN
+    DECLARE @Luong float, @NgayCong int, @SoVPham int, @TienPC float, @LuongCB float, @TienBH float
+
+    SELECT @NgayCong = ISNULL(COUNT(NgayCC), 0) 
+    FROM TTChamCong 
+    WHERE MONTH(NgayCC) = @ThangCong AND IdNV = @IdNV
+
+    SELECT @SoVPham = ISNULL(SUM(CASE WHEN ViPham = 1 THEN 1 ELSE 0 END), 0) 
+    FROM TTChamCong 
+    WHERE MONTH(NgayCC) = @ThangCong AND IdNV = @IdNV
+
+    SELECT @TienPC = ISNULL((SELECT pc.TienPC FROM NhanVien nv, PhuCap pc WHERE nv.IdPC = pc.IdPC AND nv.IdNV = @IdNV), 0)
+
+    SELECT @LuongCB = ISNULL((SELECT cv.LuongCB FROM NhanVien nv, ChucVu cv WHERE nv.IdCV = cv.IdCV AND nv.IdNV = @IdNV), 0)
+
+    SELECT @TienBH = ISNULL((SELECT TienBH FROM TTBaoHiem WHERE IdNV = @IdNV), 0)
+
+    SET @Luong = ((@LuongCB / 26) * @NgayCong - 30 * @SoVPham + @TienPC - @TienBH)
+
+    SELECT ROUND(@Luong, 3)
+END
 -- Proc tổng số lần vi phạm của 1 nhân viên trong 1 tháng được nhập từ bàn phím
  create proc sp_TongViPham(
 		@IdNV int,
 		@ThangCong int
 )
 as
-SELECT COUNT(*)  FROM TTChamCong where MONTH(NgayCC)= @ThangCong and IdNV = @IdNV and ViPham = 1 GROUP BY MONTH(NgayCC)
+BEGIN
+    SELECT ISNULL(SUM(CASE WHEN ViPham = 1 THEN 1 ELSE 0 END), 0) FROM TTChamCong WHERE MONTH(NgayCC) = @ThangCong AND IdNV = @IdNV
+END
+
+
+Select ISNULL((SELECT pc.TienPC FROM NhanVien nv, PhuCap pc WHERE nv.IdPC = pc.IdPC AND nv.IdNV = 3), 0) 0
+SELECT ISNULL((SELECT cv.LuongCB FROM NhanVien nv, ChucVu cv WHERE nv.IdCV = cv.IdCV AND nv.IdNV = 3), 0) 5000
+SELECT ISNULL((SELECT TienBH FROM TTBaoHiem WHERE IdNV = 3), 0) 525
+sp_TongNgayCong 2,5
+sp_TongViPham 2,5
+sp_TinhLuong 2,5
+drop proc sp_TongNgayCong 
+drop proc  sp_TongViPham 
+drop proc sp_TinhLuong 
+
+drop table HopDong
+drop table TTChamCong
+drop table TTBaoHiem
+drop table NhanVien
+drop table PhuCap
+drop table ChucVu
+drop table PhongBan
+

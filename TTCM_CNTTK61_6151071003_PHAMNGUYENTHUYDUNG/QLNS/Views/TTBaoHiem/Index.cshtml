@@ -7,14 +7,17 @@
 
 <h2 class="text-center">Danh Sách Bảo Hiểm</h2>
 
-        <div class="form-group row">
-            <div class="col-md-1">
-                <a href="@Url.Action("Create", "TTBaoHiem")" class="btn btn-outline-success">Thêm mới</a>
-            </div>
-        </div>
+<div class="form-group row">
+    <div class="col-md-1">
+        <a href="@Url.Action("Create", "TTBaoHiem")" class="btn btn-outline-success">Thêm mới</a>
+    </div>
+</div>
 
 <table class="table table-hover text-center ">
     <tr>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.NhanVien.HoTen)
+        </th>
         <th class="text-center">
             @Html.DisplayNameFor(model => model.TenBH)
         </th>
@@ -30,40 +33,76 @@
         <th class="text-center">
             @Html.DisplayNameFor(model => model.TienBH)
         </th>
-        <th class="text-center">
-            @Html.DisplayNameFor(model => model.NhanVien.HoTen)
-        </th>
         <th class="text-center">Thao Tác</th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenBH)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TyLeBH)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayHL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayHetHL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TienBH)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NhanVien.HoTen)
-            </td>
-            <td>
-               @* <a href="@Url.Action("Details", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
-                *@<a href="@Url.Action("Edit", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
-                <a href="@Url.Action("Delete", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="Xóa"><i class="far fa-trash-alt"></i></a>
-
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NhanVien.HoTen)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenBH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TyLeBH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayHL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayHetHL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TienBH)
+    </td>
+    <td>
+        @* <a href="@Url.Action("Details", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
+        *@<a href="@Url.Action("Edit", "TTBaoHiem", new { id = item.IdBH })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
+        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#del_@item.IdBH">
+            <i class="far fa-trash-alt"></i>
+        </button>
+    </td>
+</tr>
     }
 
 </table>
+@foreach (var item in Model)
+{
+
+    <!-- The Modal -->
+    <div class="modal" id="del_@item.IdBH">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header text-center">
+                    <h4 class="modal-title">Xóa Bảo Hiểm </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    Bạn Có Chắc Muốn Xóa Bảo Hiểm Này?
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    @using (Html.BeginForm("Delete", "TTBaoHiem", new { id = item.IdBH }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Xóa" class="btn btn-danger" />
+                        </div>
+                    }
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+}

@@ -22,19 +22,20 @@ namespace QLNS.Controllers
         }
 
         // GET: TTBaoHiem/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? idNV)
         {
-            if (id == null)
+            if (idNV == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TTBaoHiem tTBaoHiem = db.TTBaoHiems.Find(id);
+            TTBaoHiem tTBaoHiem = db.TTBaoHiems.FirstOrDefault(hd => hd.IdNV == idNV);
             if (tTBaoHiem == null)
             {
                 return HttpNotFound();
             }
             return View(tTBaoHiem);
         }
+
 
         // GET: TTBaoHiem/Create
         public ActionResult Create()

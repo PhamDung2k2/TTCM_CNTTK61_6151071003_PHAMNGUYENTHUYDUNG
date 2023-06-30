@@ -22,9 +22,11 @@ namespace QLNS.Models
         }
         [Display(Name = "Mã Phụ Cấp")]
         public int IdPC { get; set; }
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Tên Phụ Cấp")]
         public string TenPC { get; set; }
         [Display(Name = "Tiền Phụ Cấp(1000VNĐ)")]
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [RegularExpression("^[0-9]*$", ErrorMessage = "Chỉ được nhập số!")]
         public Nullable<double> TienPC { get; set; }
 

@@ -22,9 +22,11 @@ namespace QLNS.Models
         }
         [Display(Name = "Mã Phòng Ban")]
         public int IdPB { get; set; }
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Tên Phòng Ban")]
         public string TenPhong { get; set; }
         [Display(Name = "Số Điện Thoại")]
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [RegularExpression("^[0-9]*$", ErrorMessage = "Chỉ được nhập số!")]
         public string SDT { get; set; }
 

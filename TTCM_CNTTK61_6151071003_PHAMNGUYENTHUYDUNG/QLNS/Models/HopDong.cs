@@ -19,6 +19,7 @@ namespace QLNS.Models
         public int IdHD { get; set; }
         [Display(Name = "Tên Nhân Viên")]
         public Nullable<int> IdNV { get; set; }
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này!")]
         [Display(Name = "Tên Hợp Đồng")]
         public string TenHD { get; set; }
         [Display(Name = "Từ Ngày")]

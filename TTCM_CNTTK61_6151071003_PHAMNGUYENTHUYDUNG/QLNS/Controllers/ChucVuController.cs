@@ -17,6 +17,10 @@ namespace QLNS.Controllers
         // GET: ChucVu
         public ActionResult Index()
         {
+            if (TempData.ContainsKey("ErrorMessage"))
+            {
+                ViewBag.ErrorMessage = TempData["ErrorMessage"];
+            }
             return View(db.ChucVus.ToList());
         }
 
@@ -88,7 +92,13 @@ namespace QLNS.Controllers
             }
             return View(chucVu);
         }
+        public bool HasEmployeesWithChucVu(int id)
+        {
+            // Kiểm tra xem có nhân viên nào có phụ cấp này hay không
+            bool hasEmployees = db.NhanViens.Any(nv => nv.IdCV == id);
 
+            return hasEmployees;
+        }
         // GET: ChucVu/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -109,6 +119,14 @@ namespace QLNS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            bool hasEmployees = HasEmployeesWithChucVu(id);
+
+            if (hasEmployees)
+            {
+                TempData["ErrorMessage"] = "Vẫn còn nhân viên có chức vụ này!";
+                return RedirectToAction("Index");
+            }
+
             ChucVu chucVu = db.ChucVus.Find(id);
             db.ChucVus.Remove(chucVu);
             db.SaveChanges();

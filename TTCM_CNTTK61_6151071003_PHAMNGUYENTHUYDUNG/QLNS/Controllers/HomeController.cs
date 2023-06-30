@@ -16,7 +16,7 @@ namespace QLNS.Controllers
                 int id = (int)Session["user_id"];
 
                 DateTime currentMonth = DateTime.Now;
-                DateTime lastmonth = DateTime.Now.AddMonths(-2);
+                DateTime lastmonth = DateTime.Now.AddMonths(-1);
                 ViewBag.NV = db.NhanViens.AsQueryable().ToList().Count();
                 ViewBag.PB = db.PhongBans.AsQueryable().ToList().Count();
                 ViewBag.VP = db.TTChamCongs.Where(c => c.IdNV == id).Where(t=>t.NgayCC < currentMonth && t.NgayCC > lastmonth).Where(v=>v.ViPham == true).ToList();
