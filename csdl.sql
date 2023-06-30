@@ -105,12 +105,421 @@ insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-17','07:55:00','
 insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-18','07:55:00','17:00:00');
 insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-19','07:55:00','17:00:00');
 
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-16','08:05:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-16','08:00:00','17:00:00');
 insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-17','07:55:00','17:00:00');
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-18','07:55:00','17:00:00');
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-19','07:55:00','17:00:00');
+-- Tháng 5
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-03','07:50:00','17:00:00');
 
-insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-19','07:55:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-04','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-04','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-04','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-04','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-04','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-04','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-04','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-05','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-06','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-08','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-09','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-10','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-11','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-11','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-11','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-11','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-11','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-11','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-11','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-12','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-13','08:05:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-13','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-15','07:50:00','17:00:00');
+
+
+
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-16','07:50:00','17:00:00');
+
+
+
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-17','07:50:00','16:50:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-17','07:50:00','17:00:00');
+
+
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-18','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-18','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-18','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-18','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-18','07:50:00','17:00:00');
+
+
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-19','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-20','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-22','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-23','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-24','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-25','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-25','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-25','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-25','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-25','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-25','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-25','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-26','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-27','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-29','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-30','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-05-31','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-05-31','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-05-31','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-05-31','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-05-31','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-05-31','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-05-31','07:50:00','17:00:00');
+
+
+-- Tháng 6
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-01','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-01','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-01','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-01','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-01','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-01','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-01','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-02','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-02','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-02','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-02','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-02','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-02','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-02','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-03','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-03','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-05','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-05','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-06','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-06','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-07','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-07','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-07','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-07','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-07','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-07','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-07','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-08','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-08','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-09','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-09','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-10','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-10','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-12','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-12','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-13','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-13','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-14','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-14','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-14','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-14','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-14','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-14','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-14','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-15','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-15','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-16','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-16','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-17','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-17','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-19','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-19','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-20','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-20','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-21','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-21','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-21','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-21','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-21','08:10:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-21','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-21','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-22','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-22','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-23','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-23','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-24','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-24','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-26','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-26','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-27','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-27','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-28','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-28','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-28','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-28','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-28','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-28','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-28','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-29','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-29','07:50:00','17:00:00');
+
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (1,'2023-06-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (2,'2023-06-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (3,'2023-06-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (4,'2023-06-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (5,'2023-06-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (6,'2023-06-30','07:50:00','17:00:00');
+insert into TTChamCong(IdNV,NgayCC,TVao,TRa) values (8,'2023-06-30','07:50:00','17:00:00');
+
+
+
  --Hợp đồng
 insert into HopDong values (1,N'Hợp đồng 5 năm','2023-05-15','2028-05-15');
 
@@ -206,3 +615,4 @@ drop table PhuCap
 drop table ChucVu
 drop table PhongBan
 
+delete from TTChamCong Where MONTH(NgayCC) = 5
