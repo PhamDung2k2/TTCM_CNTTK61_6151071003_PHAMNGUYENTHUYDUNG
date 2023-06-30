@@ -597,22 +597,3 @@ BEGIN
 END
 
 
-Select ISNULL((SELECT pc.TienPC FROM NhanVien nv, PhuCap pc WHERE nv.IdPC = pc.IdPC AND nv.IdNV = 3), 0) 0
-SELECT ISNULL((SELECT cv.LuongCB FROM NhanVien nv, ChucVu cv WHERE nv.IdCV = cv.IdCV AND nv.IdNV = 3), 0) 5000
-SELECT ISNULL((SELECT TienBH FROM TTBaoHiem WHERE IdNV = 3), 0) 525
-sp_TongNgayCong 2,5
-sp_TongViPham 2,5
-sp_TinhLuong 2,5
-drop proc sp_TongNgayCong 
-drop proc  sp_TongViPham 
-drop proc sp_TinhLuong 
-
-drop table HopDong
-drop table TTChamCong
-drop table TTBaoHiem
-drop table NhanVien
-drop table PhuCap
-drop table ChucVu
-drop table PhongBan
-
-delete from TTChamCong Where MONTH(NgayCC) = 5
