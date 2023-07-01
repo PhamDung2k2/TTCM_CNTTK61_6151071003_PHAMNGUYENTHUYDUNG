@@ -33,8 +33,13 @@
         <th class="text-center">
             @Html.DisplayNameFor(model => model.ViPham)
         </th>
-        <th class="text-center">Thao Tác</th>
-    </tr>
+        @{
+            if (Convert.ToBoolean(Session["isAdmin"]))
+            {
+                <th class="text-center">Thao Tác</th>
+                } }
+
+            </tr>
 
     @foreach (var item in Model)
     {
@@ -57,15 +62,20 @@
     <td>
         @Html.DisplayFor(modelItem => item.ViPham)
     </td>
-    <td>
-        @*<a href="@Url.Action("Details", "TTChamCong", new { id = item.IdCC })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
-            <a href="@Url.Action("Edit", "TTChamCong", new { id = item.IdCC })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
-            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#del_@item.IdCC">
-        *@<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#del_@item.IdCC">
-            <i class="far fa-trash-alt"></i>
-        </button>
-    </td>
-</tr>
+    @{
+        if (Convert.ToBoolean(Session["isAdmin"]))
+        {
+            <td>
+                @*<a href="@Url.Action("Details", "TTChamCong", new { id = item.IdCC })" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chi Tiết"><i class="fa fa-book"></i></a>
+                    <a href="@Url.Action("Edit", "TTChamCong", new { id = item.IdCC })" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Chỉnh Sửa"><i class="fas fa-pen"></i></a>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#del_@item.IdCC">
+                *@<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#del_@item.IdCC">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </td>
+            }
+        }
+        </tr>
     }
 
 </table>
