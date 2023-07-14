@@ -1,0 +1,25 @@
+xây dựng web quản lý nhân sự 
+Hồ sơ gồm thông tin cơ bản,hợp đồng,...
+- trong hệ thống công ty có 2 loại nhân viên:
++ Nhân viên parttime
++ Nhân viên Theo ca giờ làm 
+
+- Tính lương:
+Đối với nhân viên parttime Tính lương bằng tổng giờ làm 
++Quy định :(Không làm quá 8 tiếng trong 1 ngày, 48 giờ trong 1 tuần.) 
++Công thức :Tiền lương giờ = Tiền lương ngày / Số giờ làm việc bình thường(8)
+	    Tổng lương theo tháng = sum( tiền lương giờ)
++Nhắc nhở:nếu 1 tháng có sự chấm công đi trễ so với giờ làm 1 2 3 lần => thông báo nhắc nhở , trên 3 lần sử dụng biện pháp mạnh là trừ lương cụ thể : trễ bao nhiêu giờ/ngày sẽ cộng dồn cho hết tháng và nhân với số tiền phạt theo quyết định công ty (50K) 	 	
+
+Đối với nhân viên chính thức tính lương bằng ca làm 
++Quy định:	. Số ngày đi làm theo quy định = Số ngày trong tháng –  Số ngày nghỉ
+		. Nếu ngày làm = số này làm theo quy định (tiền chuyên cần =  500k)
+		
++Công thức:	. Tiền lương tháng  = [(Lương + Các khoản phụ cấp) / Số ngày đi làm theo quy định]* Số ngày làm việc thực tế
+		. Tiền bảo hiểm xã hội phải chi: 10.5% *Lương cơ bản
+		. Tiền Chịu Thuế: Lương cơ bản - tiền bảo hiểm xã hội -11 triệu > 0 => Tiền chịu thuế else tiền chịu thuế = 0
+		. Tiền Thuế chi: tiền chịu thuế * 5%
+		. tổng tiền lương = tiền lương tháng + tiền chuyên cần - Tiền thuế chi - tiền bảo hiểm xã hội
++Nhắc nhở:nếu trong 1 tháng nhân viên nghỉ quá số ngày phép quy định sẽ chị cảnh cáo bằng cách trừ tiền (nếu 1 ngày - 100k,2 ngày -200,3 ngày tiền chuyên cần = 0)
+
+- thống kê lương
